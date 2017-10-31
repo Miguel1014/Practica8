@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica8.Reciclaje">
+    <StackLayout Margin="9" BackgroundColor="Black">
+        <ListView x:Name="myListV" BackgroundColor="LimeGreen" ItemsSource="{Binding Items}" CachingStrategy="RecycleElement" ItemSelected="ListView_ItemSelected" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="200">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+
+                            </Grid.RowDefinitions>
+
+
+
+                            <Label BackgroundColor="CadetBlue" Text="{Binding Matricula}" Grid.Column="0" Grid.Row="0" />
+                            <Label Text="{Binding Nombre}" Grid.Column="1" Grid.Row="0" />
+                            <Label Text="{Binding Apellidos}" Grid.Column="2" Grid.Row="0" />
+                            <Label Text="{Binding Direccion}" Grid.Column="3" Grid.Row="0" />
+                            <Label Text="{Binding Telefono}" Grid.Column="4" Grid.Row="0" />
+                            <Label Text="{Binding Carrera}" Grid.Column="5" Grid.Row="0" />
+                            <Label Text="{Binding Semestre}" Grid.Column="6" Grid.Row="0" />
+                            <Label Text="{Binding Correo}" Grid.Column="7" Grid.Row="0" />
+                            <Label Text="{Binding Github}" Grid.Column="8" Grid.Row="0" />
+                            
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+
+    </StackLayout>
+</ContentPage>

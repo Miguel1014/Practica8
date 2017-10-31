@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica8.Change">
+    <Grid BackgroundColor="Beige">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center">Matricula</Label>
+        <Label Grid.Column="0" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center">Nombre(s)</Label>
+        <Label Grid.Column="0" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center">Apellidos</Label>
+        <Label Grid.Column="0" Grid.Row="4" HorizontalOptions="Center" VerticalOptions="Center">Telefono</Label>
+        <Label Grid.Column="0" Grid.Row="5" HorizontalOptions="Center" VerticalOptions="Center">Dirección</Label>
+        <Label Grid.Column="0" Grid.Row="6" HorizontalOptions="Center" VerticalOptions="Center">Carrera</Label>
+        <Label Grid.Column="0" Grid.Row="7" HorizontalOptions="Center" VerticalOptions="Center">Semestre</Label>
+        <Label Grid.Column="0" Grid.Row="8" HorizontalOptions="Center" VerticalOptions="Center">Correo</Label>
+        <Label Grid.Column="0" Grid.Row="9" HorizontalOptions="Center" VerticalOptions="Center">Github</Label>
+
+
+        
+
+        <Entry IsEnabled="False" x:Name="VMatricula"  Text="{Binding Matricula}" Keyboard="Numeric" Placeholder="XXXXXXXXXXX" Grid.Column="1" Grid.Row="1" VerticalOptions="Center"></Entry>
+        <Entry Keyboard="Text" Text="{Binding Nombre}" Grid.Column="1" Grid.Row="2" VerticalOptions="Center" x:Name="VNombre" x:FieldModifier="public" ></Entry>
+        <Entry Keyboard="Text" Text="{Binding Apellidos}" Grid.Column="1" Grid.Row="3" VerticalOptions="Center" x:Name="VApellido"></Entry>
+        <Entry Keyboard="Telephone" Text="{Binding Telefono}" Grid.Column="1" Grid.Row="4" VerticalOptions="Center" x:Name="VTelefono" TextChanged="VTelefono_TextChanged"></Entry>
+        <Entry Keyboard="Text" Text="{Binding Direccion}" Grid.Column="1" Grid.Row="5" VerticalOptions="Center" x:Name="VDireccion"></Entry>
+        <Picker x:Name="picker"   Grid.Column="1" Grid.Row="6" HorizontalOptions="Center" VerticalOptions="Center"></Picker>
+        <Picker x:Name="picker1"  Grid.Column="1" Grid.Row="7" HorizontalOptions="Center" VerticalOptions="Center"></Picker>
+        <Entry x:Name="VCorreo" Text="{Binding Correo}" Keyboard="Email" Placeholder="ej. miguel123@dominio.com" Grid.Column="1" Grid.Row="8" VerticalOptions="Center"></Entry>
+        <Entry x:Name="VGithub" Text="{Binding Github}" Keyboard="Url" Grid.Column="1" Grid.Row="9" VerticalOptions="Center"></Entry>
+
+
+
+
+        <Label Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" 
+         VerticalOptions="Center" Text="DATOS"
+         Rotation="-15"
+         IsVisible="true"
+         FontSize="Large"
+         FontAttributes="Bold"
+         TextColor="Aqua" />
+
+        <Button Grid.Column="0" Grid.Row="10" Text="Actualizar" Clicked="Button_Actualizar_Clicked"></Button>
+        <Button Grid.Column="1" Grid.Row="10" Text="Eliminar" Clicked="Eliminar"></Button>
+
+    </Grid>
+</ContentPage>
