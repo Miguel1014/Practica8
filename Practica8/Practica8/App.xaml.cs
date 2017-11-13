@@ -9,11 +9,17 @@ namespace Practica8
 {
     public partial class App : Application
     {
+        public static ISQLAzure Authenticator { get; private set; }
+        public static void Init(ISQLAzure authenticator)
+        {
+            Authenticator = authenticator;
+        }
         public App()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Practica8.Vista());
+            MainPage = new NavigationPage(new Practica8.Autenticacion());
+            
         }
 
         protected override void OnStart()

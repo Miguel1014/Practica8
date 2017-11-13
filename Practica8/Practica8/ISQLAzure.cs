@@ -9,7 +9,38 @@ namespace Practica8
 {
     public interface ISQLAzure
     {
-        Task<bool> Authenticate();
+        Task<MobileServiceUser> Authenticate();
     }
 }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

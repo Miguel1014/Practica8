@@ -44,6 +44,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button Text="Iniciar sesion" Clicked="Login"/>
         <Button BackgroundColor="Blue" Text="Nuevo Registro " x:Name="insersion" Clicked="insersion_Clicked"/>
         <Button BackgroundColor="Red" Text="Reciclaje " Clicked="Reciclaje"/>
 
