@@ -52,7 +52,7 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>URL Type 1</string>
+			<string>App8</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>tesh.azurewebsites.net</string>

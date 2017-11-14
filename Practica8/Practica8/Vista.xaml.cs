@@ -17,16 +17,13 @@ namespace Practica8
     {
         public ObservableCollection<_13090414> Items { get; set; }
 
-        public static MobileServiceClient Cliente;
         public static IMobileServiceTable<_13090414> Tabla;
-        public static MobileServiceUser usuario;
 
         public Vista()
         {
             InitializeComponent();
 
-            Cliente = new MobileServiceClient(AzureConnection.AzureURL);
-            Tabla = Cliente.GetTable<_13090414>();
+            Tabla = Practica8.Autenticacion.Cliente.GetTable<_13090414>();
             LeerTabla();
 
         }
@@ -45,24 +42,6 @@ namespace Practica8
             BindingContext = this;
 
 
-        }
-
-        private async void Login(object sender, EventArgs e)
-        {
-            usuario = await App.Authenticator.Authenticate();
-            if (App.Authenticator != null)
-            {
-                if (usuario != null)
-                {
-                    await DisplayAlert("Usuario Autenticado", usuario.UserId, "ok");
-                }
-                if (usuario == null)
-                {
-                    insersion.IsVisible = false;
-                    
-                }
-
-            }
         }
 
         private void insersion_Clicked(object sender, EventArgs e)

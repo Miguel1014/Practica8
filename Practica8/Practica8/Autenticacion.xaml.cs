@@ -28,21 +28,25 @@ namespace Practica8
 
         private async void Login(object sender, EventArgs e)
         {
-            usuario = await App.Authenticator.Authenticate();
-            if (App.Authenticator != null)
+            try
             {
-                if (usuario != null)
+                usuario = await App.Authenticator.Authenticate();
+                if (App.Authenticator != null)
                 {
-                    usuario = await App.Authenticator.Authenticate();
-                   await Navigation.PushAsync(new Insertar());
-                    await DisplayAlert("Usuario Autenticado", usuario.UserId, "ok");
+                    if (usuario != null)
+                    {
+                        await DisplayAlert("Usuario Autenticado", usuario.UserId, "ok");
+                        await Navigation.PushAsync(new Vista());
+                    }
+                    if (usuario == null)
+                    {
+                        await DisplayAlert("No", usuario.UserId, "ok");
+                    }
                 }
-                if (usuario == null)
-                {
-                    await DisplayAlert("No", usuario.UserId, "ok");
-
-                }
-
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", ex.Message, "ok");
             }
         }
 

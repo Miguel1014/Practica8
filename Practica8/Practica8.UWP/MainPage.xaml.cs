@@ -25,7 +25,7 @@ namespace Practica8.UWP
         {
               try
             {
-                usuario = await Practica8.Autenticacion.Cliente.LoginAsync(MobileServiceAuthenticationProvider.WindowsAzureActiveDirectory,"tesh.azurewebsites.net");
+                usuario = await Practica8.Autenticacion.Cliente.LoginAsync(MobileServiceAuthenticationProvider.MicrosoftAccount,"tesh.azurewebsites.net");
                 if (usuario != null)
                 {
                     await new MessageDialog(usuario.UserId, "Bienvenido").ShowAsync();

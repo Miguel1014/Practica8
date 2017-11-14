@@ -22,7 +22,7 @@ namespace Practica8.iOS
             var message = string.Empty;
             try
             {
-                usuario = await Practica8.Vista.Cliente.LoginAsync(UIApplication.SharedApplication.KeyWindow.RootViewController, MobileServiceAuthenticationProvider.Facebook, "tesh.azurewebsites.net");
+                usuario = await Practica8.Autenticacion.Cliente.LoginAsync(UIApplication.SharedApplication.KeyWindow.RootViewController, MobileServiceAuthenticationProvider.MicrosoftAccount, "tesh.azurewebsites.net");
                 if (usuario != null)
                 {
                     message = string.Format("Usuario autenticado {0}.", usuario.UserId);
