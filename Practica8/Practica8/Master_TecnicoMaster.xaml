@@ -27,6 +27,7 @@
               Text="Tecnico"
               Style="{DynamicResource SubtitleStyle}"/>
        <Label x:Name="VNombre" FontSize="Micro" Grid.Column="1" Grid.Row="0"></Label>
+      <Button x:Name="Salir" Text="Cerrar Sesion" FontSize="Medium" Grid.Column="1" Grid.Row="1" Clicked="Salir_Clicked"></Button>
                 </Grid>
       </ListView.Header>
       <ListView.ItemTemplate>

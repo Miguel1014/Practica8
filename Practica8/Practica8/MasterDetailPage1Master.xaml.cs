@@ -55,5 +55,10 @@ namespace Practica8
             }
             #endregion
         }
+
+        private void Salir_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage(new Autenticacion());
+        }
     }
 }

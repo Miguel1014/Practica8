@@ -135,7 +135,7 @@ namespace Practica8
             }
             catch
             {
-                await DisplayAlert("Ok", "Erro datos no validos", "Ok");
+                await DisplayAlert("Ok", "Error datos no validos", "Ok");
             }
 
             var req1 = Practica8.Autenticacion.Client.Me.Events;

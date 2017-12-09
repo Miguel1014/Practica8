@@ -28,7 +28,7 @@
         <Label Grid.Column="0" Grid.Row="4" HorizontalOptions="Center" VerticalOptions="Center">Descripcion</Label>
         <Label Grid.Column="0" Grid.Row="5" HorizontalOptions="Center" VerticalOptions="Center">Dependencia</Label>
         <Label Grid.Column="0" Grid.Row="6" HorizontalOptions="Center" VerticalOptions="Center">Status</Label>
-        <Label Grid.Column="0" Grid.Row="7" HorizontalOptions="Center" VerticalOptions="Center">Commentarios</Label>
+        <Label Grid.Column="0" Grid.Row="7" HorizontalOptions="Center" VerticalOptions="Center">Comentarios</Label>
 
         <Entry IsEnabled="False" Text="{Binding problema}" x:Name="VProblema"  Grid.Column="1" Grid.Row="1" VerticalOptions="Center" ></Entry>
         

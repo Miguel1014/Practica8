@@ -36,8 +36,8 @@ namespace Practica8
                 MenuItems = new ObservableCollection<Master_TecnicoMenuItem>(new[]
                 {
                     new Master_TecnicoMenuItem { Id = 0, Title = "Inicio" ,TargetType=typeof(Vista3)},
-                    new Master_TecnicoMenuItem { Id = 1, Title = "Tareas" ,TargetType=typeof(Vista2)},                  
-                    new Master_TecnicoMenuItem { Id = 2, Title = "Cerrar Session" },
+                    new Master_TecnicoMenuItem { Id = 1, Title = "Tareas" ,TargetType=typeof(Vista2)}                
+                  
                 });
             }
 
@@ -55,7 +55,7 @@ namespace Practica8
 
         private void Salir_Clicked(object sender, EventArgs e)
         {
-
+            Application.Current.MainPage = new NavigationPage(new Autenticacion());
         }
     }
 }

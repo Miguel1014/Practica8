@@ -62,7 +62,7 @@ namespace Practica8
                 };
 
 
-                await Vista2.Tabla.UpdateAsync(datos);
+                await Vista.Tabla.UpdateAsync(datos);
 
                 var email = new Message
                 {

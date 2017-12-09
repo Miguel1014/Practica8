@@ -143,7 +143,7 @@ namespace Practica8
             {
 
                 ToRecipients = new List<Recipient>() { new Recipient() { EmailAddress = new EmailAddress() { Address = correo } } },
-                Subject = "TAREA TERMINADA!!!",
+                Subject = "TAREA CANCELADA!!!",
                 Body = new ItemBody
                 {
                     Content = "Hola  " + (((User)Autenticacion.Me).DisplayName) + " la tarea se cancelo deberas cancelar el evento tambien, <br/>" +

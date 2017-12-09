@@ -144,7 +144,7 @@
         </ListView>
 
         <Button BackgroundColor="Blue" Text="Nuevo Registro " x:Name="insersion" Clicked="insersion_Clicked"/>
-        <Button BackgroundColor="Red" Text="Reciclaje " Clicked="Reciclaje"/>
+        
 
     </StackLayout>
 </ContentPage>
