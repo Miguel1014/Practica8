@@ -8,6 +8,7 @@
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
         <data android:scheme="tesh.azurewebsites.net" android:host="easyauth.callback" />
+        <data android:scheme="msal78ff4792-4fb1-4d7e-9f0d-b843d468bfed" android:host="auth" />
       </intent-filter>
     </activity>
 

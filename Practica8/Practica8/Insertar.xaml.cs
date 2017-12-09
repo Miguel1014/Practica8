@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Microsoft.WindowsAzure.MobileServices;
+using System.Collections.ObjectModel;
 
 
 namespace Practica8
@@ -14,48 +15,44 @@ namespace Practica8
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Insertar : ContentPage
     {
-       
+
+        public ObservableCollection<Tecnicos_Miguel> area { get; set; }
+        public static IMobileServiceTable<Tecnicos_Miguel> Tabla;
+
         public Insertar()
         {
             InitializeComponent();
-            
-            string[] semestres = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" };
-            picker1.ItemsSource = semestres;
-            picker1.SelectedIndex = 0;
 
-            string[] carreras = { "Ing. Sistemas Computacionales", "Ingenieria Civil", "Ingenieria Industrial", "Gastronomia", "Lic. Biologia", "Lic. Administración", "Ingenieria en Mecatronica" };
-            picker.ItemsSource = carreras;
-            picker.SelectedIndex = 0;
-            
+            Tabla = Practica8.Autenticacion.Cliente.GetTable < Tecnicos_Miguel>();
+
 
 
         }
 
-        async void Button_Actualizar_Clicked(object sender, EventArgs e)
+        async void Aceptar(object sender, EventArgs e)
         {
             try
             {
 
-                var datos = new _13090414
+                var datos = new Tecnicos_Miguel
 
                 {
-                    Matricula = (long)Convert.ToInt64(VMatricula.Text),
+                    nombre = VNombre.Text,
+                    apellidos = VApellidos.Text,
+                    especialidad = VEspecialidad.Text,
+                    telefono = VTelefono.Text,
+                    direccion = VDireccion.Text,
+                    correo = VCorreo.Text,
+                   
 
-                    Nombre = VNombre.Text,
-                    Apellidos = VApellido.Text,
-                    Direccion = VDireccion.Text,
-                    Telefono = (long)Convert.ToInt64(VTelefono.Text),
-                    Carrera = Convert.ToString(picker.SelectedItem),
-                    Semestre = Convert.ToString(picker1.SelectedItem),
-                    Correo = VCorreo.Text,
-                    Github = VGithub.Text
 
                 };
 
               
-                    await Vista.Tabla.InsertAsync(datos);
+                    await Insertar.Tabla.InsertAsync(datos);
                 await Navigation.PushAsync(new Vista());
             }
+
             catch
             {
                 await DisplayAlert("Error", "Datos no validados", "Ok");
@@ -84,16 +81,34 @@ namespace Practica8
 
         }
 
-        private void VMatricula_TextChanged(object sender, TextChangedEventArgs e)
+        async void Actualziar(object sender, EventArgs e)
         {
-            int limite = 10;
-
-
-            string text = VMatricula.Text;
-            if (text.Length > limite)
+            try
             {
-                text = text.Remove(text.Length - 1);
-                VMatricula.Text = text;
+
+                var datos = new Tecnicos_Miguel
+
+                {
+                    id = "d206c90d-c365-4794-afcd-bf124c5ca056",
+                    nombre = VNombre.Text,
+                    apellidos = VApellidos.Text,
+                    especialidad = VEspecialidad.Text,
+                    telefono = VTelefono.Text,
+                    direccion = VDireccion.Text,
+                    correo = VCorreo.Text
+                   
+
+
+                };
+
+
+                await Insertar.Tabla.UpdateAsync(datos);
+                await Navigation.PushAsync(new Vista());
+            }
+
+            catch
+            {
+                await DisplayAlert("Error", "Datos no validados", "Ok");
             }
         }
     }

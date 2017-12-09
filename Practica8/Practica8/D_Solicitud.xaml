@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica8.D_Solicitud">
+    <Grid BackgroundColor="Beige">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Center">Problema</Label>
+        
+        <Label Grid.Column="0" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center">Fecha Limite</Label>
+        
+        <Label Grid.Column="0" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center">Prioridad</Label>
+        <Label Grid.Column="0" Grid.Row="4" HorizontalOptions="Center" VerticalOptions="Center">Descripcion</Label>
+        <Label Grid.Column="0" Grid.Row="5" HorizontalOptions="Center" VerticalOptions="Center">Dependencia</Label>
+        <Label Grid.Column="0" Grid.Row="6" HorizontalOptions="Center" VerticalOptions="Center">Status</Label>
+        <Label Grid.Column="0" Grid.Row="7" HorizontalOptions="Center" VerticalOptions="Center">Commentarios</Label>
+
+        <Entry IsEnabled="False" Text="{Binding problema}" x:Name="VProblema"  Grid.Column="1" Grid.Row="1" VerticalOptions="Center" ></Entry>
+        
+        <Entry IsEnabled="False"  x:Name="VDept"  Grid.Column="1" Grid.Row="2"  VerticalOptions="Center" x:FieldModifier="public"></Entry>
+        <Entry IsEnabled="False"  Grid.Column="1" Grid.Row="3" VerticalOptions="Center" x:Name="VPrioridad" x:FieldModifier="public" ></Entry>
+        <Picker IsEnabled="False" Grid.Column="1" Grid.Row="5" VerticalOptions="Center" x:Name="VDependencia" x:FieldModifier="public" ></Picker>
+        <Editor IsEnabled="False"  Keyboard="Text" Grid.Column="1" Grid.Row="4" VerticalOptions="FillAndExpand" x:Name="VDescripcion"></Editor>
+        <Picker Grid.Column="1" x:Name="VStatus" Grid.Row="6" HorizontalOptions="Center" VerticalOptions="Center">Status</Picker>
+        <Editor  Grid.Column="1"  Grid.Row="7" x:Name="VComentarios" ></Editor>
+
+
+        <Label Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" 
+         VerticalOptions="Center" Text="DATOS"
+         Rotation="-15"
+         IsVisible="true"
+         FontSize="Large"
+         FontAttributes="Bold"
+         TextColor="Aqua" />
+
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="10" Text="Enviar" Clicked="insertar" ></Button>
+        
+
+    </Grid>
+</ContentPage>

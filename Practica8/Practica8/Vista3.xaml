@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica8.Vista3">
+    <StackLayout Margin="9" BackgroundColor="White">
+        <Label Text="Tareas" FontSize="Large" HorizontalOptions="CenterAndExpand"></Label>
+        <Grid>
+            <Grid.ColumnDefinitions>
+
+
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Label Text="Titulo" Grid.Column="0" Grid.Row="0"  BackgroundColor="Yellow"/>
+            <Label Text="Area" Grid.Column="1" Grid.Row="0" BackgroundColor="Yellow"/>
+            <Label Text="Nombre Tecnico" Grid.Column="2" Grid.Row="0" BackgroundColor="Yellow" />
+            <Label Text="Fecha Limite" Grid.Column="3" Grid.Row="0" BackgroundColor="Yellow"/>
+            <Label Text="Hora Limite" Grid.Column="4" Grid.Row="0" BackgroundColor="Yellow"/>
+            <Label Text="ID" Grid.Column="5" Grid.Row="0" BackgroundColor="Yellow"/>
+            <Label Text="Prioridad Alta" Grid.ColumnSpan="5" Grid.Row="1" BackgroundColor="Red"/>
+        </Grid>
+      
+        <ListView x:Name="myListV" BackgroundColor="BlueViolet" ItemsSource="{Binding Items}" CachingStrategy="RecycleElement" ItemSelected="ListView_ItemSelected" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="35">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+
+
+
+                            <Label BackgroundColor="CadetBlue" Text="{Binding problema}" Grid.Column="0" Grid.Row="0" />
+                            <Label Text="{Binding carea}" Grid.Column="1" Grid.Row="0" />
+                            <Label Text="{Binding tecnico}" Grid.Column="2" Grid.Row="0" />
+                            <Label Text="{Binding fecha_limite}" Grid.Column="3" Grid.Row="0" />
+                            <Label Text="{Binding prioridad}" Grid.Column="4" Grid.Row="0" />
+                            <Label Text="{Binding status}" Grid.Column="5" Grid.Row="0" />
+                            <Label Text="{Binding id}" Grid.Column="6" Grid.Row="0" />
+
+
+                        </Grid>
+
+                    </ViewCell>
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+
+
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <Label Text="Titulo" Grid.Column="0" Grid.Row="0"  BackgroundColor="Yellow"/>
+            <Label Text="Area" Grid.Column="1" Grid.Row="0" BackgroundColor="Yellow"/>
+            <Label Text="Nombre Tecnico" Grid.Column="2" Grid.Row="0" BackgroundColor="Yellow" />
+            <Label Text="Fecha Limite" Grid.Column="3" Grid.Row="0" BackgroundColor="Yellow"/>
+            <Label Text="Hora Limite" Grid.Column="4" Grid.Row="0" BackgroundColor="Yellow"/>
+            <Label Text="ID" Grid.Column="5" Grid.Row="0" BackgroundColor="Yellow"/>
+            <Label Text="Tareas Proximas" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" Grid.Row="1" BackgroundColor="Red"/>
+        </Grid>
+
+        <ListView x:Name="myListV2" BackgroundColor="BlueViolet" ItemsSource="{Binding Items1}" CachingStrategy="RecycleElement" ItemSelected="myListV2_ItemSelected" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell Height="35">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+
+
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="20"/>
+                            </Grid.RowDefinitions>
+
+
+
+                            <Label BackgroundColor="CadetBlue" Text="{Binding problema}" Grid.Column="0" Grid.Row="0" />
+                            <Label Text="{Binding carea}" Grid.Column="1" Grid.Row="0" />
+                            <Label Text="{Binding tecnico}" Grid.Column="2" Grid.Row="0" />
+                            <Label Text="{Binding fecha_limite}" Grid.Column="3" Grid.Row="0" />
+                            <Label Text="{Binding prioridad}" Grid.Column="4" Grid.Row="0" />
+                            <Label Text="{Binding status}" Grid.Column="5" Grid.Row="0" />
+                            <Label Text="{Binding id}" Grid.Column="6" Grid.Row="0" />
+
+
+                        </Grid>
+
+                    </ViewCell>
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <Button BackgroundColor="Blue" Text="Nuevo Registro " x:Name="insersion" Clicked="insersion_Clicked"/>
+        <Button BackgroundColor="Red" Text="Reciclaje " Clicked="Reciclaje"/>
+
+    </StackLayout>
+</ContentPage>

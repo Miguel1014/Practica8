@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Practica8.Vista">
+             x:Class="Practica8.Vista2">
     <StackLayout Margin="9" BackgroundColor="White">
-        <Label Text="Tareas Pendientes" FontSize="Large" HorizontalOptions="CenterAndExpand"></Label>
+        <Label Text="Todas las Tareas Pendientes" FontSize="Large" HorizontalOptions="CenterAndExpand"></Label>
         <Grid>
             <Grid.ColumnDefinitions>
 
@@ -25,7 +25,7 @@
             <Label Text="Area" Grid.Column="1" Grid.Row="0" BackgroundColor="Yellow"/>
             <Label Text="Nombre Tecnico" Grid.Column="2" Grid.Row="0" BackgroundColor="Yellow" />
             <Label Text="Fecha Limite" Grid.Column="3" Grid.Row="0" BackgroundColor="Yellow"/>
-            <Label Text="Prioridad" Grid.Column="4" Grid.Row="0" BackgroundColor="Yellow"/>
+            <Label Text="Status" Grid.Column="4" Grid.Row="0" BackgroundColor="Yellow"/>
             <Label Text="Status" Grid.Column="5" Grid.Row="0" BackgroundColor="Yellow"/>
             <Label Text="ID" Grid.Column="6" Grid.Row="0" BackgroundColor="Yellow"/>
         </Grid>
@@ -45,6 +45,7 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                                 <ColumnDefinition />
+                              
 
                             </Grid.ColumnDefinitions>
                             <Grid.RowDefinitions>
@@ -52,7 +53,7 @@
                                 <RowDefinition Height="20"/>
                             </Grid.RowDefinitions>
 
-
+                            
 
                             <Label BackgroundColor="CadetBlue" Text="{Binding problema}" Grid.Column="0" Grid.Row="0" />
                             <Label Text="{Binding carea}" Grid.Column="1" Grid.Row="0" />
@@ -61,7 +62,7 @@
                             <Label Text="{Binding prioridad}" Grid.Column="4" Grid.Row="0" />
                             <Label Text="{Binding status}" Grid.Column="5" Grid.Row="0" />
                             <Label Text="{Binding id}" Grid.Column="6" Grid.Row="0" />
-
+                        
 
                         </Grid>
 

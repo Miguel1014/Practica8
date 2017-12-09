@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Practica8.Vista">
+             x:Class="Practica8.Historial">
     <StackLayout Margin="9" BackgroundColor="White">
-        <Label Text="Tareas Pendientes" FontSize="Large" HorizontalOptions="CenterAndExpand"></Label>
+        <Label Text="Historial de tareas" FontSize="Large" HorizontalOptions="CenterAndExpand"></Label>
         <Grid>
             <Grid.ColumnDefinitions>
 
@@ -30,7 +30,7 @@
             <Label Text="ID" Grid.Column="6" Grid.Row="0" BackgroundColor="Yellow"/>
         </Grid>
       
-        <ListView x:Name="myListV" BackgroundColor="BlueViolet" ItemsSource="{Binding Items}" CachingStrategy="RecycleElement" ItemSelected="ListView_ItemSelected" >
+        <ListView x:Name="myListV" BackgroundColor="DarkMagenta" ItemsSource="{Binding Items}" CachingStrategy="RecycleElement" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell Height="75">
@@ -74,8 +74,7 @@
         </ListView>
         
 
-        <Button BackgroundColor="Blue" Text="Nuevo Registro " x:Name="insersion" Clicked="insersion_Clicked"/>
-        <Button BackgroundColor="Red" Text="Reciclaje " Clicked="Reciclaje"/>
+        
 
     </StackLayout>
 </ContentPage>

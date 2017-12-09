@@ -3,9 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Practica8"
              x:Class="Practica8.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="Yellow" />
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="Large"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20" Spacing="10">
+        <Label x:Name="Username"/>
+        <Button x:Name="Authenticate" Text="Authenticator" Clicked="Authenticate_Clicked"/>
+        <Button x:Name="FullDayLeave" Text="Full Day Leave" Clicked="FullDayLeave_Clicked"/>
+        <Button x:Name="TimeOffForSometimes" Text="Half Day Leave" Clicked="TimeOffForSometimes_Clicked"/>
+        <Label x:Name="Status" FontSize="Small"/>
+    </StackLayout>
 
 </ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica8.Area">
+    <Grid BackgroundColor="Beige">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Column="0" Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center">Agregar Area</Label>
+        <Label Grid.Column="0" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center">Area(s)</Label>
+
+
+     
+        <Entry Keyboard="Text"  Grid.Column="1" Grid.Row="2" VerticalOptions="Center" x:Name="VArea" x:FieldModifier="public" ></Entry>
+        <Picker x:Name="picker"  Grid.Column="1" Grid.Row="3" HorizontalOptions="Center" VerticalOptions="Center"  SelectedIndexChanged="picker_SelectedIndexChanged"></Picker>
+        
+        
+        <Label Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" 
+         VerticalOptions="Center" Text="AGREGAR AREA"
+         Rotation="0"
+         IsVisible="true"
+         FontSize="Large"
+         FontAttributes="Bold"
+         TextColor="Aqua" />
+
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="8" Text="Insertar" Clicked="insertar"></Button>
+       
+    </Grid>
+</ContentPage>

@@ -39,14 +39,14 @@
                             <Label Text="{Binding Semestre}" Grid.Column="6" Grid.Row="0" />
                             <Label Text="{Binding Correo}" Grid.Column="7" Grid.Row="0" />
                             <Label Text="{Binding Github}" Grid.Column="8" Grid.Row="0" />
-                            
+                                                         
 
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
 
     </StackLayout>
 </ContentPage>

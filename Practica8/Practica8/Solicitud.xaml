@@ -1,13 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Practica8.Autenticacion">
+             x:Class="Practica8.Solicitud">
     <ContentPage.Content>
         <StackLayout>
-
-            <Button  Text="Iniciar Sesion" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"  TextColor="White" Clicked="Login"></Button>
-
-            <Entry x:Name="ID"></Entry>
+            <Label Text="Welcome to Xamarin Forms!" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

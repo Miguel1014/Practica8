@@ -9,6 +9,9 @@ using Android.OS;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Threading.Tasks;
 using Android.Service.Notification;
+using Microsoft.Identity.Client;
+using Android.Content;
+
 namespace Practica8.Droid
 {
     [Activity(Label = "App  2", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -41,6 +44,7 @@ namespace Practica8.Droid
 
         protected override void OnCreate(Bundle bundle)
         {
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -49,6 +53,13 @@ namespace Practica8.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             App.Init((ISQLAzure)this);
             LoadApplication(new App());
+            App.IdentityClientApp.RedirectUri = "msal78ff4792-4fb1-4d7e-9f0d-b843d468bfed://auth";
+            App.UiParent = new UIParent(Xamarin.Forms.Forms.Context as Activity);
+        }
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
         }
     }
 }

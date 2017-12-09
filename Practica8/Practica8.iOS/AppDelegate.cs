@@ -6,6 +6,7 @@ using Foundation;
 using UIKit;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Threading.Tasks;
+using Microsoft.Identity.Client;
 
 namespace Practica8.iOS
 {
@@ -56,8 +57,13 @@ namespace Practica8.iOS
             global::Xamarin.Forms.Forms.Init();
             App.Init(this);
             LoadApplication(new App());
-
+            App.IdentityClientApp.RedirectUri = "msal78ff4792-4fb1-4d7e-9f0d-b843d468bfed://auth";
             return base.FinishedLaunching(app, options);
+        }
+        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
+        {
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(url);
+            return true;
         }
     }
 }

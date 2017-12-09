@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Practica8.Change">
+             x:Class="Practica8.N_Solicitud">
     <Grid BackgroundColor="Beige">
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -36,10 +36,10 @@
         <TimePicker   Grid.Column="1" Grid.Row="4" VerticalOptions="Center" x:Name="VHora" ></TimePicker>
         <Picker x:Name="VDept"  Grid.Column="1" Grid.Row="5"  VerticalOptions="Center" x:FieldModifier="public"></Picker>
         <Picker Grid.Column="1" Grid.Row="6" VerticalOptions="Center" x:Name="VPrioridad" x:FieldModifier="public" ></Picker>
-        <Picker Grid.Column="1" Grid.Row="8" VerticalOptions="Center" x:Name="VDependencia" x:FieldModifier="public" ></Picker>
+        <Entry Grid.Column="1" Grid.Row="8" VerticalOptions="Center" x:Name="VDependencia" x:FieldModifier="public" ></Entry>
         <Editor Keyboard="Text" Grid.Column="1" Grid.Row="7" VerticalOptions="FillAndExpand" x:Name="VDescripcion"></Editor>
 
-
+        
         <ListView  Grid.Column="1"  Grid.Row="9" x:Name="myListV" BackgroundColor="DeepSkyBlue" ItemsSource="{Binding Items}" CachingStrategy="RecycleElement" ItemSelected="ListView_ItemSelected" >
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -63,13 +63,13 @@
 
                         </Grid>
                     </ViewCell>
-                </DataTemplate>
+                   </DataTemplate>
 
             </ListView.ItemTemplate>
 
         </ListView>
 
-        <Label Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" 
+            <Label Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" 
          VerticalOptions="Center" Text="DATOS"
          Rotation="-15"
          IsVisible="true"
@@ -77,8 +77,8 @@
          FontAttributes="Bold"
          TextColor="Aqua" />
 
-        <Button Grid.Column="0" Grid.Row="10" Text="Actualizar" Clicked="insertar"></Button>
-        <Button Grid.Column="1" Grid.Row="10" Text="Eliminar" Clicked="Button_Clicked"></Button>
+        <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="10" Text="Insertar" Clicked="insertar"></Button>
+        
 
     </Grid>
 </ContentPage>

@@ -44,10 +44,10 @@ namespace Practica8
 
 
 
-            var datos = new _13090414
+            var datos = new Solicitud_Miguel
 
             {
-                Id = VID,
+                id = VID,
                 
 
             };

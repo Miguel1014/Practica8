@@ -41,12 +41,34 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Area.xaml.cs">
+      <DependentUpon>Area.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Areas_Miguel.cs" />
     <Compile Include="Autenticacion.xaml.cs">
       <DependentUpon>Autenticacion.xaml</DependentUpon>
     </Compile>
     <Compile Include="AzureConnections.cs" />
     <Compile Include="Change.xaml.cs">
       <DependentUpon>Change.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Datos.cs" />
+    <Compile Include="D_Solicitud.xaml.cs">
+      <DependentUpon>D_Solicitud.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud_Miguel.cs" />
+    <Compile Include="Master_Tecnico.xaml.cs">
+      <DependentUpon>Master_Tecnico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Master_TecnicoDetail.xaml.cs">
+      <DependentUpon>Master_TecnicoDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Master_TecnicoMaster.xaml.cs">
+      <DependentUpon>Master_TecnicoMaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Master_TecnicoMenuItem.cs" />
+    <Compile Include="N_Solicitud.xaml.cs">
+      <DependentUpon>N_Solicitud.xaml</DependentUpon>
     </Compile>
     <Compile Include="Insertar.xaml.cs">
       <DependentUpon>Insertar.xaml</DependentUpon>
@@ -55,9 +77,29 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MasterDetailPage1.xaml.cs">
+      <DependentUpon>MasterDetailPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDetailPage1Master.xaml.cs">
+      <DependentUpon>MasterDetailPage1Master.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDetailPage1MenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reciclaje.xaml.cs">
       <DependentUpon>Reciclaje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud.xaml.cs">
+      <DependentUpon>Solicitud.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tecnicos_Miguel.cs" />
+    <Compile Include="Historial.xaml.cs">
+      <DependentUpon>Historial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista3.xaml.cs">
+      <DependentUpon>Vista3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vista2.xaml.cs">
+      <DependentUpon>Vista2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vista.xaml.cs">
       <DependentUpon>Vista.xaml</DependentUpon>
@@ -80,6 +122,15 @@
     </Reference>
     <Reference Include="Microsoft.Azure.Mobile.Client.SQLiteStore, Version=4.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Azure.Mobile.Client.SQLiteStore.4.0.2\lib\portable-net45+win8+wp8+wpa81\Microsoft.Azure.Mobile.Client.SQLiteStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph, Version=1.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Graph.1.6.2\lib\netstandard1.1\Microsoft.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph.Core, Version=1.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Graph.Core.1.6.2\lib\netstandard1.1\Microsoft.Graph.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Identity.Client, Version=1.1.0.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Identity.Client.1.1.0-preview\lib\netstandard1.1\Microsoft.Identity.Client.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
@@ -104,6 +155,9 @@
     </Reference>
     <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\netstandard1.1\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
     </Reference>
     <Reference Include="Validation, Version=2.4.0.0, Culture=neutral, PublicKeyToken=2fc06f0d701809a7, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Validation.2.4.18\lib\portable-net45+win8+wp8+wpa81\Validation.dll</HintPath>
@@ -160,6 +214,78 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="microsoft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Solicitud.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MasterDetailPage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MasterDetailPage1Master.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Area.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="N_Solicitud.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Master_Tecnico.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Master_TecnicoMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Master_TecnicoDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Vista2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Vista3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="D_Solicitud.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Historial.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

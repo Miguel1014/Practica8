@@ -58,6 +58,16 @@
 				<string>tesh.azurewebsites.net</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>MSAL</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>msal78ff4792-4fb1-4d7e-9f0d-b843d468bfed</string>
+			</array>
+			<key>CFBundleURLTypes</key>
+			<string>None</string>
+		</dict>
 	</array>
 </dict>
 </plist>
